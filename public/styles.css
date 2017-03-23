@@ -1,0 +1,350 @@
+@font-face {
+  font-family: Myriad Pro;
+  src: url("fonts/Myriad Pro Regular.ttf");
+}
+
+body {
+  font-family: "Myriad Pro", "Myriad", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-top {
+  background-color: white;
+  display: table;
+  /*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-top div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-top .logo-block {
+  font-size: 35px;
+  padding-right: 70px;
+  padding-left: 15px;
+}
+
+.main-top .inline-menu {
+  height: 150px;
+  margin: 0;
+  padding: 0px;
+}
+
+.main-top .inline-menu > tbody > tr > td {
+  padding: 0px;
+}
+
+.main-top .inline-menu > tbody > tr > td > p {
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+}
+
+.main-top .inline-menu > tbody > tr > td:not(:last-child) > p {
+  border-right: 1px solid black;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div {
+  display: none;
+  position: absolute;
+  top: 160px;
+  margin-left: -20px;
+  background-color: #e2e7ed;
+  z-index: 999999;
+}
+
+.main-top .inline-menu > tbody > tr td.services:hover div {
+  display: block;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div {
+  cursor: pointer;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div > p {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 90px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div > p:hover {
+  background-color: #00AEFF;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div > p:first-child:before {
+  /*http://htmlbook.ru/blog/treugolniki-cherez-css*/
+  left: 60px;
+  top: -33px;
+  /* Положение треугольника */
+  content: '';
+  position: absolute;
+  /* Абсолютное позиционирование */
+  border: 15px solid transparent;
+  border-bottom: 20px solid #e2e7ed;
+}
+
+.main-top .inline-menu > tbody > tr td.services > div > p:first-child:hover:before {
+  /*http://htmlbook.ru/blog/treugolniki-cherez-css*/
+  left: 60px;
+  top: -33px;
+  /* Положение треугольника */
+  content: '';
+  position: absolute;
+  /* Абсолютное позиционирование */
+  border: 15px solid transparent;
+  border-bottom: 20px solid #00AEFF;
+}
+
+.main-top .inline-menu > tbody > tr > td > p:hover {
+  color: #3EB1FF;
+}
+
+.main-top .inline-menu li:hover {
+  color: #3EB1FF;
+}
+
+.main-top .search-bar {
+  background-color: #F2F3F7;
+  background-image: url("images/search.png");
+  background-repeat: no-repeat;
+  background-position: 90%;
+  color: #ABACAE;
+  margin-left: 50px;
+  border: 1px solid #F2F3F7;
+  font-size: 20px;
+  outline: none;
+  height: 30px;
+  width: 200px;
+}
+
+.main-middle {
+  background-color: #31333F;
+  color: white;
+}
+
+.main-middle .main-middle-text {
+  /*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  font-size: 44.88px;
+}
+
+.main-middle .main-middle-text > div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-middle .main-middle-text .buttom-more {
+  background-color: #00AEFF;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-left: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-middle .main-middle-text .buttom-more p {
+  margin: 0px;
+}
+
+.main-middle .main-middle-image {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.main-middle .main-middle-image img,
+.main-middle .main-middle-image div {
+  display: table-cell;
+}
+
+.main-middle .main-middle-image > div {
+  display: table-cell;
+}
+
+.main-middle .iphone_img {
+  position: absolute;
+  margin-top: 80px;
+}
+
+.main-middle .macbook_img {
+  margin-bottom: -35px;
+  margin-right: 50px;
+}
+
+.main-middle .left_arrow {
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.main-middle .right_arrow {
+  margin-left: 100px;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+.main-middle2 {
+  margin-top: 60px;
+  margin-bottom: 47px;
+}
+
+.main-middle2 > table > tbody > tr > td > div {
+  text-align: center;
+}
+
+.main-middle2 > table > tbody > tr > td > div > p.main-middle2-header {
+  font-size: 30pt;
+}
+
+.main-middle2 > table > tbody > tr > td > div > p.main-middle2-description {
+  font-size: 15pt;
+}
+
+.main-middle2 > table > tbody > tr > td > div > a.main-middle2-ref {
+  color: #3EB1FF;
+  text-decoration: none;
+}
+
+.main-middle3 {
+  background-color: #e2e7ed;
+  padding-bottom: 100px;
+}
+
+.main-middle3 > div {
+  display: inline;
+}
+
+.main-middle3 > div > table {
+  /*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+  font-size: 0pt;
+  border-collapse: collapse;
+}
+
+.main-middle3 > div > table > tbody > tr td:hover .mask {
+  display: block;
+}
+
+.main-middle3 > div > table > tbody > tr td:hover > img {
+  display: none;
+}
+
+.main-middle3 > div > table > tbody > tr > td {
+  vertical-align: top;
+  margin: 10px;
+  padding: 0px;
+  border: 0px;
+}
+
+.main-middle3 > div > table > tbody > tr > td > p {
+  margin: 0px;
+  padding-top: 56px;
+  padding-bottom: 33px;
+  font-size: 30pt;
+  color: #626262;
+}
+
+.main-middle3 > div > table > tbody > tr > td .mask {
+  display: none;
+}
+
+.main-middle3 > div > table > tbody > tr .view,
+.main-middle3 > div > table > tbody > tr .share {
+  position: absolute;
+  margin-top: 160px;
+  cursor: pointer;
+}
+
+.main-middle3 > div > table > tbody > tr .share {
+  margin-left: -70px;
+}
+
+.main-middle4 {
+  padding-bottom: 80px;
+}
+
+.main-middle4 table {
+  /*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-middle4 table p {
+  font-size: 30pt;
+}
+
+.main-middle4 table img {
+  margin-right: 35px;
+}
+
+.main-middle4 table .left_arrow2 {
+  cursor: pointer;
+}
+
+.main-middle4 table .right_arrow2 {
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.main-bottom {
+  background-color: #31333F;
+  color: #e2e7ed;
+}
+
+.main-bottom div {
+  /*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  padding-top: 40px;
+  padding-bottom: 78px;
+  font-size: 15px;
+}
+
+.main-bottom div > table > tbody > tr > td {
+  padding: 0px;
+}
+
+.main-bottom div > table > tbody > tr > td > table > tbody > tr > td > p {
+  cursor: pointer;
+  padding-right: 20px;
+  margin: 0px;
+}
+
+.main-bottom div > table > tbody > tr > td > table > tbody > tr > td:not(:last-child) > p {
+  border-right: 1px solid white;
+}
+
+.main-bottom div > table > tbody > tr > td > table > tbody > tr > td:not(:first-child) > p {
+  padding-left: 20px;
+}
+
+.main-bottom div > table > tbody > tr > td .copyright {
+  margin: 0px;
+}
+
+.main-bottom div > table > tbody > tr > td .copyright2 {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.main-bottom div .socials {
+  margin-left: 200px;
+}
+
+.main-bottom div .socials td > img {
+  cursor: pointer;
+  margin-right: 10px;
+}

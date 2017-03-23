@@ -1,0 +1,357 @@
+
+@font-face {
+    font-family: Myriad Pro;
+    src: url(fonts/Myriad Pro Regular.ttf);
+   }
+
+@searchBlockBackgrounColor: #F2F3F7;
+@linkHoverColor: #3EB1FF;
+@serchTextColor: #ABACAE;
+@learnMoreButton:#00AEFF;
+@dropdownMenuColor: #e2e7ed;
+@dropdownMenuHoverColor: @learnMoreButton;
+@mainBackgroundColor: #31333F;
+@mainPart3Color: @dropdownMenuColor;
+@ourWorksColor: #626262;
+@footherTextColor: @dropdownMenuColor;
+@menuTopPadding: 150px;
+@searchImage: url(images/search.png);
+@fontMyriadPro: "Myriad Pro", "Myriad", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.allignMiddle(){/*если сделать пустой параметр, эта примесь не попадёт в CSS*/
+    margin-left: auto;
+    margin-right: auto;}
+.clicable(){cursor: pointer}
+.drowTreug(@color){/*http://htmlbook.ru/blog/treugolniki-cherez-css*/
+    left: 60px; top: -33px; /* Положение треугольника */
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    border: 15px solid transparent; 
+    border-bottom: 20px solid @color;}
+body
+{
+    font-family: @fontMyriadPro;
+}
+.main-top
+{
+    background-color: white;
+    display: table;
+    .allignMiddle;
+    div
+    {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .logo-block
+    {
+        font-size: 35px;
+        padding-right: 70px;
+        padding-left: 15px;
+    }
+    .inline-menu
+    {
+        height: @menuTopPadding;
+        margin: 0; 
+        padding: 0px; 
+        >tbody>tr
+        {
+            >td
+            {
+                padding: 0px;
+                >p
+                {
+                    .clicable;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 15px;
+                }
+            }
+            >td:not(:last-child)
+            {
+                >p
+                {
+                    border-right: 1px solid black;
+                }
+            }
+            td.services
+            {
+                >div
+                {
+                    display: none;
+                    position: absolute;
+                    top:@menuTopPadding+10px;
+                    margin-left: -20px;
+                    background-color: @dropdownMenuColor;
+                    z-index: 999999;
+                }
+            }
+            
+            td.services:hover div
+            {
+                display: block;
+            }
+            td.services>div
+            {
+                .clicable;
+                >p
+                {
+                    margin: 0;
+                    padding-left: 20px;
+                    padding-right: 90px;
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                }
+                >p:hover
+                {
+                    background-color: @dropdownMenuHoverColor;
+                }
+                >p:first-child:before
+                {
+                    .drowTreug(@dropdownMenuColor);
+                }
+                >p:first-child:hover:before
+                {
+                    .drowTreug(@dropdownMenuHoverColor);
+                }
+            }
+            >td>p:hover
+            {
+                color: @linkHoverColor;
+            }
+        }
+        
+        li:hover
+        {
+            color: @linkHoverColor;
+        }
+    }
+    .search-bar
+    {
+        background-color: @searchBlockBackgrounColor;
+        background-image: @searchImage;
+        background-repeat: no-repeat;
+        background-position: 90%;
+        color: @serchTextColor;
+        margin-left: 50px;
+        border: 1px solid @searchBlockBackgrounColor; 
+        font-size: 20px;
+        outline: none; // удаляет обводку
+        height: 30px; 
+        width: 200px;
+    }
+}
+.main-middle
+{
+    background-color: @mainBackgroundColor;
+    color: white;
+    .main-middle-text
+    {
+        .allignMiddle;
+        display: table;
+        font-size: 44.88px;  
+        >div
+        {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .buttom-more
+        {
+            background-color: @learnMoreButton;
+            .clicable;
+            font-size: 22px;
+            border-radius: 5px;
+            margin-left: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            p{margin: 0px;}
+        }
+    }
+    .main-middle-image
+    {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        img,div
+        {
+            display: table-cell;
+        }
+    }
+    .main-middle-image>div {display: table-cell;}
+    .iphone_img { position: absolute;margin-top: 80px; }
+    .macbook_img { margin-bottom: -35px; margin-right: 50px;}
+    .left_arrow 
+    {
+        margin-right: 100px;
+        .clicable;
+    }
+    .right_arrow 
+    {
+        margin-left: 100px;
+        transform: scaleX(-1);
+        .clicable;
+    }
+}
+.main-middle2
+{
+    margin-top: 60px;
+    margin-bottom: 47px;
+    >table>tbody
+    {
+        >tr>td>div
+        {
+            text-align: center;
+            >p.main-middle2-header
+            {
+                font-size: 30pt;
+            }
+            >p.main-middle2-description
+            {
+                font-size: 15pt;
+            }
+            >a.main-middle2-ref
+            {
+                color: @linkHoverColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.main-middle3
+{
+    background-color: @mainPart3Color;
+    padding-bottom: 100px;
+    >div
+    {
+        display:inline;
+        >table
+        {
+            .allignMiddle;
+            vertical-align: top;
+            font-size: 0pt;
+            border-collapse: collapse;
+            >tbody>tr
+            {
+                td:hover .mask
+                    {
+                        display: block;
+                    }
+                    td:hover>img{display: none;}
+                >td
+                {
+                    vertical-align: top;
+                    margin: 10px;
+                    padding: 0px;
+                    border:  0px;
+                    >p
+                    {
+                        margin: 0px;
+                        padding-top: 56px;
+                        padding-bottom: 33px;
+                        font-size: 30pt;
+                        color: @ourWorksColor;
+                    }
+                    .mask
+                    {
+                        display: none;
+                    }
+                }
+                .view,.share
+                {
+                    position: absolute;
+                    margin-top: 160px;
+                    .clicable;
+                }
+                .share
+                {
+                    margin-left: -70px;
+                }
+            }
+        }
+    }
+}
+.main-middle4
+{
+    padding-bottom: 80px;
+    table
+    {
+        .allignMiddle;
+        p
+        {
+            font-size: 30pt;
+        }
+        img
+        {
+            margin-right:35px;
+        }
+        .left_arrow2
+        {
+            .clicable;
+        }
+        .right_arrow2
+        {
+            .clicable;
+            transform: scaleX(-1);
+        }
+    }   
+}
+.main-bottom
+{
+    background-color: @mainBackgroundColor;
+    color:@footherTextColor;
+    div
+    {
+        .allignMiddle;
+        display: table;
+        padding-top: 40px;
+        padding-bottom: 78px;
+        font-size: 15px;
+        >table>tbody>tr
+        {
+            >td
+            {
+                padding: 0px;
+                >table>tbody>tr
+                {
+                    >td>p
+                    {
+                        .clicable;
+                        padding-right: 20px;
+                        margin: 0px;
+                    }
+                    
+                    >td:not(:last-child)
+                    {
+                        >p
+                        {
+                            border-right: 1px solid white;
+                        }
+                    }
+                    >td:not(:first-child)>p
+                    {
+                        padding-left: 20px;
+                    }
+                }
+                .copyright
+                {
+                    margin: 0px;
+                }
+                .copyright2
+                {
+                    font-size: 12px;
+                    margin-top: 30px;
+                }
+            }
+        }
+        .socials
+        {
+            margin-left: 200px;
+            td>img
+            {
+                .clicable;
+                margin-right: 10px;
+            }
+        }
+    }
+}
